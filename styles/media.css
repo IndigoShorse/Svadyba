@@ -1,0 +1,45 @@
+@media (max-width: 520px) {
+  .envelope {
+    width: 86vw;
+  }
+
+  .seal {
+    width: 76px;
+    height: 76px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 22vw, 7rem);
+  }
+
+  .intro::after {
+    display: none;
+  }
+  
+  .intro-wrap {
+    font-size: 1.3rem;
+  }
+
+  .introl {
+    left: 5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .intro-wrap {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

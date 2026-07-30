@@ -1,0 +1,15 @@
+[
+  { "id": 1, "name": "Настя", "gender": "Ж" },
+  { "id": 2, "name": "Коля", "gender": "М" },
+  { "id": 3, "name": "Егор", "gender": "М" },
+  { "id": 4, "name": "Гу", "gender": "Ж" },
+  { "id": 5, "name": "Мисрон", "gender": "М" },
+  { "id": 6, "name": "Ники", "gender": "М" },
+  { "id": 7, "name": "Денчик", "gender": "М" },
+  { "id": 8, "name": "Русланчик", "gender": "М" },
+  { "id": 9, "name": "Саша", "gender": "Ж" },
+  { "id": 10, "name": "Максис", "aliases": ["Максрим"], "gender": "М" },
+  { "id": 11, "name": "Маша", "gender": "Ж" },
+  { "id": 12, "name": "Ариша", "gender": "Ж" },
+  { "id": 13, "name": "Юра", "aliases": ["Юля"], "gender": "МЖ" }
+]

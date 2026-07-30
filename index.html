@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f4f0">
+    <meta name="description" content="Свадебное приглашение Дани и Сони">
+    <title>Даня & Соня — мы женимся!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/invitation/base.css">
+    <link rel="stylesheet" href="styles/invitation/hero.css">
+    <link rel="stylesheet" href="styles/invitation/welcome.css">
+    <link rel="stylesheet" href="styles/invitation/quote.css">
+    <link rel="stylesheet" href="styles/invitation/footer.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/media.css">
+</head>
+
+<body class="is-locked">
+    <main>
+        <section class="intro" id="intro" aria-label="Свадебная открытка">
+            <div class="petal petal--one" aria-hidden="true"></div>
+            <div class="petal petal--two" aria-hidden="true"></div>
+            <div class="intro-wrap" aria-hidden="true">
+                <h2 class="introl">Уважаемый(ая) гость(я)!</h2>
+                <div class="intror">Приглашаем тебя</div>
+            </div>
+            <div class="envelope" id="envelope">
+                <div class="envelope__back"></div>
+                <div class="envelope__letter" aria-hidden="true"><span>Д</span><i>&</i><span>С</span></div>
+                <div class="envelope__front"></div>
+                <div class="envelope__flap"></div>
+                <button class="seal" id="openInvitation" type="button" aria-controls="invitation"
+                    aria-expanded="false"><span>Жми!</span></button>
+            </div>
+            <p class="intro__hint">
+                Если ты это читаешь — тебе пришло<br />
+                приглашение на <strong>особенное событие</strong>
+            </p>
+        </section>
+
+        <article class="invitation" id="invitation" aria-hidden="true"></article>
+    </main>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

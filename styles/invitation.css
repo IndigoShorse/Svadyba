@@ -1,0 +1,272 @@
+/* Стили для отдельного блока приглашения */
+.invitation {
+  display: none;
+  background: var(--bone);
+}
+
+.invitation.is-visible {
+  display: block;
+  animation: pageIn .7s both;
+}
+
+.section {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.hero__section {
+  overflow: hidden;
+  color: var(--bone);
+  background-color: var(--ink);
+  background-image: radial-gradient(circle at center, rgba(124, 16, 33, .32), transparent 43%), repeating-linear-gradient(45deg, transparent 0 34px, rgba(255, 255, 255, .025) 35px 36px);
+}
+
+.hero__section::before {
+  content: "✦ навеки вместе ✦";
+  position: absolute;
+  top: 8%;
+  left: 7%;
+  padding-bottom: 5px;
+  color: var(--bone);
+  border-bottom: 1px solid var(--blood);
+  font-size: clamp(1rem, 3vw, 1.8rem);
+  transform: rotate(-8deg);
+}
+
+.hero__section::after {
+  content: "†";
+  position: absolute;
+  right: 7%;
+  bottom: 9%;
+  color: var(--blood);
+  font-size: clamp(7rem, 20vw, 13rem);
+  line-height: 1;
+  transform: rotate(10deg);
+}
+
+.hero__section .eyebrow {
+  color: var(--bone);
+  background: var(--blood);
+  border-color: var(--bone);
+}
+
+.hero__section h1 {
+  z-index: 1;
+  margin: 0;
+  font-size: clamp(5rem, 19vw, 11rem);
+  font-weight: 400;
+  line-height: .7;
+  letter-spacing: .01em;
+  text-shadow: 3px 3px 0 var(--blood);
+}
+
+.hero__section h1 span {
+  display: block;
+}
+
+.hero__section h1 span:first-child {
+  transform: rotate(-2deg);
+}
+
+.hero__section h1 span:last-child {
+  transform: rotate(2deg);
+}
+
+.hero__section h1 i {
+  display: block;
+  margin: .12em 0;
+  color: var(--blood);
+  font-size: .7em;
+  font-style: normal;
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0 0 30px;
+  padding: 7px 14px;
+  color: var(--bone);
+  background: var(--ink);
+  border: 1px solid currentColor;
+  font-size: 1rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transform: rotate(-1.5deg);
+}
+
+.botanical {
+  margin: 25px 0 10px;
+  color: var(--blood);
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.hero__section .lead {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  line-height: 1.05;
+  transform: rotate(-1deg);
+}
+
+.scroll-link {
+  position: absolute;
+  bottom: 25px;
+  z-index: 2;
+  display: grid;
+  gap: 4px;
+  color: var(--bone);
+  font-size: .95rem;
+  letter-spacing: .12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.scroll-link b {
+  color: var(--blood);
+  font-size: 1.4rem;
+  animation: bounce 1.8s infinite;
+}
+
+.welcome {
+  overflow: hidden;
+  background-color: var(--bone);
+  background-image: linear-gradient(90deg, transparent 49.8%, rgba(0, 0, 0, .12) 50%, transparent 50.2%);
+}
+
+.welcome::before {
+  content: "☾ будь с нами ☽";
+  position: absolute;
+  top: 10%;
+  right: 7%;
+  color: var(--blood);
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  transform: rotate(8deg);
+}
+
+.welcome::after {
+  content: "†";
+  position: absolute;
+  left: 4%;
+  bottom: 3%;
+  color: rgba(124, 16, 33, .14);
+  font-size: clamp(10rem, 30vw, 20rem);
+  line-height: 1;
+}
+
+.section__content {
+  z-index: 1;
+  width: min(100%, 790px);
+}
+
+.welcome h2 {
+  margin: 0 0 35px;
+  font-size: clamp(3rem, 9vw, 5.8rem);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: .01em;
+  text-shadow: 2px 2px 0 rgba(124, 16, 33, .24);
+}
+
+.welcome p:last-child {
+  max-width: 620px;
+  margin: auto;
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.45;
+}
+
+.quote {
+  min-height: 75svh;
+  overflow: hidden;
+  color: var(--bone);
+  background-color: var(--ink);
+  background-image: radial-gradient(circle at 10% 10%, rgba(124, 16, 33, .4), transparent 28%), radial-gradient(circle at 90% 90%, rgba(124, 16, 33, .3), transparent 30%);
+}
+
+.quote::before,
+.quote::after {
+  position: absolute;
+  color: var(--blood);
+  font-size: clamp(5rem, 14vw, 9rem);
+  line-height: 1;
+}
+
+.quote::before {
+  content: "☾";
+  top: 8%;
+  left: 7%;
+}
+
+.quote::after {
+  content: "☽";
+  right: 7%;
+  bottom: 8%;
+}
+
+.quote blockquote {
+  z-index: 1;
+  margin: 0 0 38px;
+  color: var(--bone);
+  font-size: clamp(3rem, 9vw, 5.8rem);
+  line-height: .95;
+}
+
+.quote p {
+  z-index: 1;
+  margin: 0;
+  padding: 7px 13px;
+  color: var(--ink);
+  background: var(--bone);
+  border: 1px solid var(--blood);
+  font-size: 1rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transform: rotate(2deg);
+}
+
+.footer {
+  min-height: 55svh;
+  overflow: hidden;
+  background: var(--bone);
+  border-top: 3px solid var(--ink);
+}
+
+.footer::before {
+  content: "✦  †  ✦";
+  position: absolute;
+  top: 12%;
+  color: var(--blood);
+  font-size: 2rem;
+  letter-spacing: .5em;
+}
+
+.monogram {
+  color: var(--blood);
+  font-size: clamp(5rem, 15vw, 9rem);
+  line-height: 1;
+  text-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(-4deg);
+}
+
+.monogram i {
+  color: var(--ink);
+  font-style: normal;
+}
+
+.footer p {
+  margin-top: 25px;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px) rotate(.5deg);
+  transition: opacity .75s ease, transform .75s ease;
+}
+
+.reveal.is-shown {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}

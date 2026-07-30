@@ -1,0 +1,49 @@
+/* Цитата и пожелание */
+.quote {
+  min-height: 75svh;
+  overflow: hidden;
+  color: var(--bone);
+  background-color: var(--ink);
+  background-image: radial-gradient(circle at 10% 10%, rgba(124, 16, 33, .4), transparent 28%), radial-gradient(circle at 90% 90%, rgba(124, 16, 33, .3), transparent 30%);
+}
+
+.quote::before,
+.quote::after {
+  position: absolute;
+  color: var(--blood);
+  font-size: clamp(5rem, 14vw, 9rem);
+  line-height: 1;
+}
+
+.quote::before {
+  content: "☾";
+  top: 8%;
+  left: 7%;
+}
+
+.quote::after {
+  content: "☽";
+  right: 7%;
+  bottom: 8%;
+}
+
+.quote blockquote {
+  z-index: 1;
+  margin: 0 0 38px;
+  color: var(--bone);
+  font-size: clamp(3rem, 9vw, 5.8rem);
+  line-height: .95;
+}
+
+.quote p {
+  z-index: 1;
+  margin: 0;
+  padding: 7px 13px;
+  color: var(--ink);
+  background: var(--bone);
+  border: 1px solid var(--blood);
+  font-size: 1rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  transform: rotate(2deg);
+}
