@@ -1,34 +1,42 @@
 /* Подвал приглашения */
 .footer {
-  min-height: 55svh;
-  overflow: hidden;
-  background: var(--bone);
-  border-top: 3px solid var(--ink);
+    min-height: 100px;
+    height: max-content;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+    background: var(--bone);
+    border-top: 3px solid var(--ink);
 }
 
 .footer::before {
-  content: "✦  †  ✦";
-  position: absolute;
-  top: 12%;
-  color: var(--blood);
-  font-size: 2rem;
-  letter-spacing: .5em;
+    content: "✦  †  ✦";
+    position: absolute;
+    top: 12%;
+    color: var(--blood);
+    font-size: 2rem;
+    letter-spacing: .5em;
 }
 
 .monogram {
-  color: var(--blood);
-  font-size: clamp(5rem, 15vw, 9rem);
-  line-height: 1;
-  text-shadow: 2px 2px 0 var(--ink);
-  transform: rotate(-4deg);
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .1em;
+    color: var(--blood);
+    font-size: clamp(5rem, 15vw, 9rem);
+    line-height: 1;
+    text-shadow: 2px 2px 0 var(--ink);
+    transform: rotate(-4deg);
 }
 
 .monogram i {
-  color: var(--ink);
-  font-style: normal;
+    color: var(--ink);
+    font-style: normal;
 }
 
 .footer p {
-  margin-top: 25px;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    margin-bottom: 40px;
 }

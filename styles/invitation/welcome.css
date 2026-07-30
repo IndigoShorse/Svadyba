@@ -1,12 +1,11 @@
 /* Секция приветствия */
 .welcome {
   overflow: hidden;
-  background-color: var(--bone);
-  background-image: linear-gradient(90deg, transparent 49.8%, rgba(0, 0, 0, .12) 50%, transparent 50.2%);
+  background-color: color-mix(in oklab, var(--bone) 80%, var(--blood));
 }
 
 .welcome::before {
-  content: "☾ будь с нами ☽";
+  content: "✦ Особенный день ✦";
   position: absolute;
   top: 10%;
   right: 7%;
@@ -39,9 +38,42 @@
   text-shadow: 2px 2px 0 rgba(124, 16, 33, .24);
 }
 
-.welcome p:last-child {
+.welcome .section__content > p:last-of-type {
   max-width: 620px;
   margin: auto;
   font-size: clamp(1.25rem, 3vw, 1.65rem);
   line-height: 1.45;
+}
+
+.dress-code-palette {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.dress-code-palette__color {
+  width: clamp(42px, 8vw, 64px);
+  aspect-ratio: 1;
+  border: 1px solid var(--ink);
+}
+
+.dress-code-palette__color--ink {
+  background: var(--ink);
+}
+
+.dress-code-palette__color--bone {
+  background: color-mix(in oklab, #000, var(--bone) 95%);
+}
+
+.dress-code-palette__color--blood {
+  background: var(--blood);
+}
+
+.dress-code-palette__color--paper {
+  background: var(--paper);
+}
+
+.dress-code-palette__color--ash {
+  background: var(--ash);
 }
