@@ -35,7 +35,7 @@
   line-height: .95;
 }
 
-.place p {
+.place > p {
   z-index: 1;
   margin: 0;
   padding: 7px 13px;
@@ -46,4 +46,131 @@
   letter-spacing: .14em;
   text-transform: uppercase;
   transform: rotate(2deg);
+}
+
+.place-list {
+  z-index: 1;
+  width: min(100%, 920px);
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.place-card {
+  display: grid;
+  grid-template-columns: minmax(220px, .75fr) minmax(260px, 1fr);
+  width: 100%;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--bone);
+  border: 1px solid var(--blood);
+  box-shadow: 9px 11px 0 rgba(0, 0, 0, .25);
+  text-align: left;
+}
+
+.place-card:nth-child(odd) {
+  transform: rotate(-1deg);
+}
+
+.place-card:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.place-card__details {
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  padding: 24px;
+}
+
+.place-card__time {
+  width: fit-content;
+  padding: 6px 11px;
+  color: var(--bone);
+  background: var(--blood);
+  border: 1px solid var(--ink);
+  font-size: clamp(1.4rem, 4vw, 2.25rem);
+  line-height: 1;
+}
+
+.place-card h3,
+.place-card p {
+  margin: 0;
+}
+
+.place-card h3 {
+  font-size: clamp(1.55rem, 4vw, 2.5rem);
+  line-height: 1;
+}
+
+.place-card p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.place-card__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  border-left: 1px solid var(--blood);
+  background: var(--paper);
+  cursor: zoom-in;
+}
+
+.map-viewer {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, .82);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+}
+
+.map-viewer.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.map-viewer__image {
+  display: block;
+  max-width: min(100%, 1180px);
+  max-height: min(100%, 820px);
+  object-fit: contain;
+  border: 2px solid var(--bone);
+  box-shadow: 12px 14px 0 rgba(0, 0, 0, .45);
+  cursor: default;
+}
+
+body.has-map-viewer {
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .place {
+    padding-inline: 18px;
+  }
+
+  .place-card {
+    grid-template-columns: 1fr;
+  }
+
+  .place-card__map {
+    border-top: 1px solid var(--blood);
+    border-left: 0;
+  }
+
+  .map-viewer {
+    padding: 14px;
+  }
+
+  .map-viewer__image {
+    max-height: 86svh;
+    box-shadow: 6px 8px 0 rgba(0, 0, 0, .45);
+  }
 }

@@ -60,23 +60,12 @@ a {
   transition: opacity .7s ease, visibility .7s ease;
 }
 
-.intro::after {
-  font-size: 3.5em !important;
-  content: "↙";
-  position: absolute;
-  top: calc(50% - 270px);
-  right: calc(50% - 110px);
-  color: var(--blood);
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  transform: rotate(8deg);
-}
-
 .intro-wrap {
   position: absolute;
   padding: 10px;
   max-width: 100%;
   flex-wrap: wrap;
-  top: max(5vh, calc(50% - 500px));
+  top: max(10vh, calc(50% - 400px));
   z-index: 10;
   display: flex;
   flex-direction: row;
@@ -97,7 +86,8 @@ a {
   max-width: 100%;
   margin: 0;
   font-weight: 400;
-  transform: rotate(-4deg);
+  transform: rotate(-6deg);
+  font-size: 1.5em;
 }
 
 .intror {
@@ -108,7 +98,7 @@ a {
   width: 100%;
   min-width: 7em;
   margin-left: auto;
-  font-size: 2em;
+  font-size: 1.5em;
   transform: rotate(6deg);
 }
 

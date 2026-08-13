@@ -38,7 +38,7 @@
   text-shadow: 2px 2px 0 rgba(124, 16, 33, .24);
 }
 
-.welcome .section__content > p:last-of-type {
+.welcome .section__content > p {
   max-width: 620px;
   margin: auto;
   font-size: clamp(1.25rem, 3vw, 1.65rem);

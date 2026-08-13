@@ -4,6 +4,8 @@ const openButton = document.querySelector('#openInvitation');
 const invitation = document.querySelector('#invitation');
 const introGreeting = document.querySelector('.introl');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let mapViewer = null;
+let mapViewerImage = null;
 
 function showVisibleElements() {
   document.querySelectorAll('.reveal').forEach((element) => {
@@ -37,6 +39,41 @@ function getGreetingByGender(gender, name) {
   }
 
   return `Уважаемый(ая) ${name}`;
+}
+
+function closeMapViewer() {
+  if (!mapViewer) {
+    return;
+  }
+
+  mapViewer.classList.remove('is-open');
+  mapViewer.setAttribute('aria-hidden', 'true');
+  mapViewerImage.removeAttribute('src');
+  mapViewerImage.removeAttribute('alt');
+  document.body.classList.remove('has-map-viewer');
+}
+
+function openMapViewer(image) {
+  if (!mapViewer) {
+    mapViewer = document.createElement('div');
+    mapViewer.className = 'map-viewer';
+    mapViewer.setAttribute('aria-hidden', 'true');
+    mapViewer.innerHTML = '<img class="map-viewer__image" alt="">';
+    document.body.append(mapViewer);
+    mapViewerImage = mapViewer.querySelector('.map-viewer__image');
+
+    mapViewer.addEventListener('click', (event) => {
+      if (event.target === mapViewer) {
+        closeMapViewer();
+      }
+    });
+  }
+
+  mapViewerImage.src = image.currentSrc || image.src;
+  mapViewerImage.alt = image.alt || 'Увеличенная карта';
+  mapViewer.classList.add('is-open');
+  mapViewer.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('has-map-viewer');
 }
 
 async function setGreetingFromQuery() {
@@ -110,3 +147,19 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
 setGreetingFromQuery();
 loadInvitationContent();
+
+document.addEventListener('click', (event) => {
+  const mapImage = event.target.closest('.place-card__map');
+
+  if (!mapImage) {
+    return;
+  }
+
+  openMapViewer(mapImage);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeMapViewer();
+  }
+});

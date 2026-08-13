@@ -19,12 +19,14 @@
 }
 
 .eyebrow {
-    margin-top: 20px;
+    margin: 20px auto!important;
+    width: fit-content;
     padding: 7px 14px;
     color: var(--bone);
     background: var(--blood);
     border-color: var(--bone);
     border: 1px solid currentColor;
+    font-size: 1em!important;
     letter-spacing: .14em;
     text-transform: uppercase;
     transform: rotate(-1.5deg);
