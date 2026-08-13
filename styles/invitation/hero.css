@@ -1,100 +1,112 @@
 /* Hero-блок приглашения */
 .hero__section {
-  overflow: hidden;
-  color: var(--bone);
-  background-color: var(--ink);
-  background-image: radial-gradient(circle at center, rgba(124, 16, 33, .32), transparent 43%), repeating-linear-gradient(45deg, transparent 0 34px, rgba(255, 255, 255, .025) 35px 36px);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    overflow: hidden;
+    color: var(--bone);
+    background-color: var(--ink);
+    background-image: radial-gradient(circle at center, rgba(124, 16, 33, .32), transparent 43%), repeating-linear-gradient(45deg, transparent 0 34px, rgba(255, 255, 255, .025) 35px 36px), radial-gradient(circle at 90% 80%, rgba(124, 16, 33, .4), transparent 18%);
 }
 
 .hero__section::before {
-  content: "✦ навеки вместе ✦";
-  position: absolute;
-  top: 8%;
-  left: 7%;
-  padding-bottom: 5px;
-  color: var(--bone);
-  border-bottom: 1px solid var(--blood);
-  font-size: clamp(1rem, 3vw, 1.8rem);
-  transform: rotate(-8deg);
+    content: "✦ навеки вместе ✦";
+    position: absolute;
+    top: 8%;
+    left: 7%;
+    padding-bottom: 5px;
+    color: var(--bone);
+    border-bottom: 1px solid var(--blood);
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    transform: rotate(-8deg);
 }
 
 .hero__section::after {
-  content: "†";
-  position: absolute;
-  right: 7%;
-  bottom: 9%;
-  color: var(--blood);
-  font-size: clamp(7rem, 20vw, 13rem);
-  line-height: 1;
-  transform: rotate(10deg);
-}
-
-.hero__section .eyebrow {
-  color: var(--bone);
-  background: var(--blood);
-  border-color: var(--bone);
+    content: "†";
+    position: absolute;
+    right: 7%;
+    bottom: 9%;
+    color: var(--blood);
+    font-size: clamp(7rem, 20vw, 13rem);
+    line-height: 1;
+    transform: rotate(10deg);
 }
 
 .hero__section h1 {
-  z-index: 1;
-  margin: 0;
-  font-size: clamp(5rem, 19vw, 11rem);
-  font-weight: 400;
-  line-height: .7;
-  letter-spacing: .01em;
-  text-shadow: 3px 3px 0 var(--blood);
+    z-index: 1;
+    margin: 0;
+    font-size: clamp(5rem, 19vw, 11rem);
+    font-weight: 400;
+    line-height: .7;
+    letter-spacing: .01em;
+    text-shadow: 3px 3px 0 var(--blood);
 }
 
 .hero__section h1 span {
-  display: block;
+    display: block;
 }
 
 .hero__section h1 span:first-child {
-  transform: rotate(-2deg);
+    transform: rotate(-2deg);
 }
 
 .hero__section h1 span:last-child {
-  transform: rotate(2deg);
+    transform: rotate(2deg);
 }
 
 .hero__section h1 i {
-  display: block;
-  margin: .12em 0;
-  color: var(--blood);
-  font-size: .7em;
-  font-style: normal;
-  line-height: 1;
+    display: block;
+    margin: .12em 0;
+    color: var(--blood);
+    font-size: .7em;
+    font-style: normal;
+    line-height: 1;
 }
 
 .botanical {
-  margin: 25px 0 10px;
-  color: var(--blood);
-  font-size: 3.5rem;
-  line-height: 1;
+    margin: 25px 0 10px;
+    color: var(--blood);
+    font-size: 3.5rem;
+    line-height: 1;
 }
 
 .hero__section .lead {
-  margin: 0;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  line-height: 1.05;
-  transform: rotate(-1deg);
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    line-height: 1.05;
+    transform: rotate(-1deg);
 }
 
 .scroll-link {
-  position: absolute;
-  bottom: 25px;
-  z-index: 2;
-  display: grid;
-  gap: 4px;
-  color: var(--bone);
-  font-size: .95rem;
-  letter-spacing: .12em;
-  text-decoration: none;
-  text-transform: uppercase;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+
+    padding: 10px 16px;
+
+    color: var(--ink);
+    background: var(--bone);
+    border: 1px solid var(--blood);
+    font-size: clamp(.85rem, 2.2vw, 1.1rem);
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 2;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+.scroll-link:hover {
+    background-color: color-mix(in oklab, var(--bone), var(--blood) 10%);
 }
 
+
 .scroll-link b {
-  color: var(--blood);
-  font-size: 1.4rem;
-  animation: bounce 1.8s infinite;
+    margin-left: 8px;
+    color: var(--blood);
+    font-size: 1.4rem;
+    animation: bounce 1.8s infinite;
 }

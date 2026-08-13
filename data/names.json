@@ -11,5 +11,6 @@
   { "id": 10, "name": "Максис", "aliases": ["Максрим"], "gender": "М" },
   { "id": 11, "name": "Маша", "gender": "Ж" },
   { "id": 12, "name": "Ариша", "gender": "Ж" },
-  { "id": 13, "name": "Юра", "aliases": ["Юля"], "gender": "МЖ" }
+  { "id": 13, "name": "Юра", "aliases": ["Юля"], "gender": "МЖ" },
+  { "id": 14, "name": "Худяк", "gender": "М" }
 ]

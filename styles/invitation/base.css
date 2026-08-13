@@ -1,42 +1,62 @@
 /* Базовая структура приглашения */
 .invitation {
-  display: none;
-  background: var(--bone);
+    display: none;
+    background: var(--bone);
 }
 
 .invitation.is-visible {
-  display: block;
-  animation: pageIn .7s both;
+    display: block;
+    animation: pageIn .7s both;
 }
 
 .section {
-  position: relative;
-  display: grid;
-  place-items: center;
-  min-height: 100svh;
-  padding: 90px 24px;
-  text-align: center;
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+    padding: 90px 24px;
+    text-align: center;
 }
 
 .eyebrow {
-  margin: 0 0 30px;
-  padding: 7px 14px;
-  color: var(--bone);
-  background: var(--ink);
-  border: 1px solid currentColor;
-  font-size: 1rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  transform: rotate(-1.5deg);
+    margin: 20px auto!important;
+    width: fit-content;
+    padding: 7px 14px;
+    color: var(--bone);
+    background: var(--blood);
+    border-color: var(--bone);
+    border: 1px solid currentColor;
+    font-size: 1em!important;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    transform: rotate(-1.5deg);
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(28px) rotate(.5deg);
-  transition: opacity .75s ease, transform .75s ease;
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(28px) rotate(.5deg);
+    transition: opacity .75s ease, transform .75s ease;
 }
 
 .reveal.is-shown {
-  opacity: 1;
-  transform: translateY(0) rotate(0);
+    flex: 1 1 100%;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.reveal h1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.eyebrow.reveal.is-shown {
+    flex: 0 0 auto;
 }
