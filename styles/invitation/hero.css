@@ -73,6 +73,7 @@
 
 .hero__section .lead {
     margin: 0;
+    margin-left: 20px;
     font-size: clamp(1.8rem, 5vw, 2.8rem);
     line-height: 1.05;
     transform: rotate(-1deg);
